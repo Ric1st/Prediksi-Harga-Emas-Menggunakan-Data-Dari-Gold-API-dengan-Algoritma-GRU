@@ -10,7 +10,7 @@ CSV_FILE = "data/gold_price.csv"
 def get_gold_price():
     try:
         response = requests.get(API_URL, timeout=5).json()
-        price = response.get("price")  # spot price per troy ounce
+        price = response.get("price") 
         return float(price)
     except:
         return None
@@ -44,4 +44,4 @@ if __name__ == "__main__":
 
     while True:
         append_price()
-        time.sleep(60)  # fetch setiap 1 menit
+        time.sleep(60)  
